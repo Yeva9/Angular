@@ -1,0 +1,54 @@
+<div class="container">
+<br>
+<h1><mark>Car:</mark>{{name}} 
+<small>{{model}}</small></h1>
+
+<div class="alert alert-success"> Specifications:
+<ul>
+    <li>{{speed}}</li>
+    <li>{{colors.car}}</li>
+    <li>{{colors.salon}}</li>
+    <li>{{colors.weels}}</li>
+</ul>
+</div>
+
+<div class="alert alert-warning"><h5>Options</h5>
+    <ul>
+        <li *ngFor='let opt of options; let i = index'>{{i + 1}} - {{opt}} 
+            <button class="btn btn-warning btn-sm" (click)="deleteOpt(opt)">x</button></li>
+        
+    </ul>
+</div>
+
+<form (submit)='addOpt(opt.value)'>
+    <div class="form-group">
+        <br>
+        <label for="option">Add new option</label>
+        <input type="text" id='option' placeholder="sth" class="form-control" #opt>
+        <br>
+        <button type="submit" class="btn btn-outline-success">Add</button>
+    </div>
+    <br>
+</form>
+
+<h5>Edit object</h5>
+<button class="btn btn-success"(click)='showEdit()'>Edit</button>
+<div><br></div>
+<form *ngIf=isEdit>
+    <div class="form-group">
+        <input type="text" id='option' placeholder="car's name" class="form-control" [(ngModel)]='name' name='name'><br>
+        <input type="text" id='option' placeholder="model's name" class="form-control"[(ngModel)]='model' name='model'><br>
+        <input type="text" id='option' placeholder="speed" class="form-control"[(ngModel)]='speed' name='speed'><br>
+        <input type="text" id='option' placeholder="car's colour" class="form-control"[(ngModel)]='colors.car' name='car'><br>
+        <input type="text" id='option' placeholder="salon's colour" class="form-control"[(ngModel)]='colors.salon' name='salon'><br>
+
+    </div>
+</form>
+
+<h5>Choose a car</h5>
+<button class="btn btn-danger" (click)='carSelect("Bmw")'>BMW</button>
+<button class="btn btn-info" (click)='carSelect("Audi")'>Audi</button>
+<button class="btn btn-success"(click)='carSelect("Merc")'>Merc</button>
+
+</div>
+

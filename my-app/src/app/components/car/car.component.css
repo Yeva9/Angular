@@ -1,0 +1,17 @@
+h1{
+color: red;
+}
+
+button{
+    margin-right: 10px;
+}
+
+.btn-sm {
+    font-size: 0.8rem;
+    padding: 5px;
+    line-height: 8px;
+}
+
+.container{
+    margin-bottom: 50px;
+}
