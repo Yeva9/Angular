@@ -11,7 +11,8 @@ import { KeyboardComponent } from './components/keyboard/keyboard.component';
 
 const appRoutes: Routes = [
   {path: '', component:CarComponent},
-  {path: 'contacts', component:ContactsComponent}
+  {path: 'contacts', component:ContactsComponent},
+  {path: 'keyboard', component:KeyboardComponent}
 ]
 
 @NgModule({

@@ -1,1 +1,15 @@
-<p>keyboard works!</p>
+<div class="container">
+    <div class="show">
+        <div class="input-field" (window:keypress)="onKeypress($event)">{{pressed_key}}
+            <br><br>
+        </div>
+    </div>
+    <div class="keyboard">
+        <div class="kb-rows">
+            <div class="kb-row" *ngFor='let key of array_of_keys'>
+                <button class="btn btn-light{{sytle_of_key }}"><span>{{key}}</span></button>
+            </div>
+
+        </div>
+    </div>
+</div>

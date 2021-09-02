@@ -1,0 +1,21 @@
+.container{
+    text-align: center;
+}
+
+.keyboard{
+    background-color: #ececec;
+    border-radius: 5px;
+}
+
+ .btn{
+     margin: 5px;
+ }
+
+ .input-field{
+     color: red;
+ }
+
+ .kb-rows{
+    display: inline-flex;
+ }
+
