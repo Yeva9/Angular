@@ -10,6 +10,7 @@ export class KeyboardComponent implements OnInit {
   pressed_key: string;
   array_of_keys: string[];
   sytle_of_key:any;
+  toggle:boolean;
 
   constructor() { }
 
@@ -17,12 +18,16 @@ export class KeyboardComponent implements OnInit {
     this.pressed_key = '';
     this.array_of_keys = keys;
     this.sytle_of_key = '';
+    this.toggle = true;
   }
 
-  onKeypress(event) {
-    console.log(event.code);
+  onKeypress(event: KeyboardEvent) {
     this.pressed_key += event.key;
-    this.sytle_of_key = event.code;
-    this.sytle_of_key.style.backgroundColor = 'red';
+    this.sytle_of_key = event.key;
+        // console.log(event.key);
+  }
+
+  onButtonPress(key){
+    this.pressed_key += key;   
   }
 }

@@ -7,9 +7,13 @@
     <div class="keyboard">
         <div class="kb-rows">
             <div class="kb-row" *ngFor='let key of array_of_keys'>
-                <button class="btn btn-light{{sytle_of_key }}"><span>{{key}}</span></button>
+                <button 
+                    (keypress)="onButtonPress($event)"
+                    class="btn btn-light "
+                    [class.selected]="sytle_of_key == key">
+                    <span>{{key}}</span>
+                </button>
             </div>
-
         </div>
     </div>
 </div>

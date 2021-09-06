@@ -19,3 +19,12 @@
     display: inline-flex;
  }
 
+button:focus{
+    background-color:rgb(0, 247, 255);
+ }
+
+.q, .selected{
+     background-color: rgb(0, 247, 255);
+ }
+
+
